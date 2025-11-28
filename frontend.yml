@@ -1,0 +1,7 @@
+- name: FrontEnd
+  hosts: all
+  tasks:
+    - name: Install nginx
+      ansible.builtin.dnf:
+        name: '@nginx:1.24/nginx'
+        state: present
