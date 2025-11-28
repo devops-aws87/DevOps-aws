@@ -2,6 +2,6 @@
   hosts: all
   tasks:
     - name: Install Nginx 1.24
-      ansible.builtin.dnf:
-        name: '@nginx:1.24/nginx'
+      dnf:
+        name: nginx=1.24.*
         state: present
