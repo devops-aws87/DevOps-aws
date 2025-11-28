@@ -3,5 +3,5 @@
   tasks:
     - name: Ensure Nginx is installed at version 1.24 test
       ansible.builtin.dnf:
-        name: '@nginx:1.24/nginx'
+        name: '@nginx:1.24'
         state: present
