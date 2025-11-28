@@ -7,7 +7,7 @@
 
     - name: Ensure Nginx is installed at version 1.24
       dnf:
-        name: nginx=1.24
+        name: '@nginx:1.24/nginx'
         state: present
         allow_downgrade: yes # Use if you need to ensure a specific version, even if a newer one exists
 
