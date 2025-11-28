@@ -1,18 +1,7 @@
 - name: Install Nginx 1.24
   hosts: all
   tasks:
-    - name: Update apt cache
-      dnf:
-        update_cache: yes
-
     - name: Ensure Nginx is installed at version 1.24
-      dnf:
+      ansible.builtin.dnf:
         name: '@nginx:1.24/nginx'
         state: present
-        allow_downgrade: yes # Use if you need to ensure a specific version, even if a newer one exists
-
-    - name: Ensure Nginx service is running and enabled
-      systemd:
-        name: nginx
-        state: started
-        enabled: yes
